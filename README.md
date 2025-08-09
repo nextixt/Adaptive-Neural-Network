@@ -1,2 +1,2 @@
 # Adaptive-Neural-Network
-This is adaptive Neural Network that can learns without labels, whithout teachers, like human brain. Model is Adaptive because it can think in different ways, like human brain.
+I built an adaptive, explainable emotion classifier that learns continuously from user feedback, visualizes its reasoning, and improves in real time.
