@@ -5,6 +5,8 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 import numpy as np
 from scipy.sparse import vstack
+import pandas as pd
+from sklearn.metrics import classification_report
 feedback_data = []
 
 def clean_text(text):
@@ -18,10 +20,9 @@ def clean_text(text):
 
     return text
 
-import pandas as pd
 
 # upload CSV
-df = pd.read_csv('tweet_emotions.csv')
+df = pd.read_csv('C:/Users/Nextixt/Documents/tweet_emotions.csv')
 
 # clean content
 df['clean_content'] = df['content'].apply(clean_text)
@@ -60,6 +61,7 @@ RFC.fit(X_train_vec, y_train)
 
 # predicting and reciving accuracy
 y_pred = RFC.predict(X_test_vec)
+print(classification_report(y_test, y_pred))
 
 def explain_and_learn(text, vectorizer, RFC, top_k=5):
     # vectorizing
@@ -109,7 +111,4 @@ while True:
         break
 
     explain_and_learn(text, vectorizer, RFC)
-
-
-
-
+    print(f'Accuracy after this training: {classification_report(y_test, y_pred)}')
