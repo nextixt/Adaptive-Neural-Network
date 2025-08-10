@@ -14,6 +14,7 @@ This project is an **adaptive emotion classification system** that:
 ## 📂 Dataset
 **Name:** `tweet_emotions.csv`  
 **Source:** [https://www.kaggle.com/datasets/pashupatigupta/emotion-detection-from-text]
+
 **Description:**
 - ~40,000 English tweets labeled with 13 different emotions.
 - Used for training/testing the classifier.
