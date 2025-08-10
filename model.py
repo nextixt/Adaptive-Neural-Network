@@ -21,7 +21,7 @@ def clean_text(text):
 import pandas as pd
 
 # upload CSV
-df = pd.read_csv('C:/Users/Nextixt/Documents/tweet_emotions.csv')
+df = pd.read_csv('tweet_emotions.csv')
 
 # clean content
 df['clean_content'] = df['content'].apply(clean_text)
